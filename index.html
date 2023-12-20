@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <meta name="description" content="An interactive Card-details-form webpage. 
+  It contains well written, well thought and well 
+  designed Interactive card details form with well made 
+  responsive design and thank you state.">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <div id="card-container">
+      <div id="card-front">
+        <div id="card-logo">
+          <img src="images/card-logo.svg" alt="circles">
+        </div>
+        <div id="card-number">
+          <h1 id="fullCardNumber">0000 0000 0000 0000</h1>
+        </div>
+        <div id="card-name">
+          <h2 id="fullName">Jane Appleseed</h2>
+          <span id="card-date">00/00</span>
+        </div>
+      </div>
+      <div id="card-back">
+        <span id="cvc">000</span>
+      </div>
+    </div>
+    <div id="form-message">
+      <form id="formElement">
+        <label for="name">Cardholder Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed" maxlength="25">
+        <p class="error" id="errorName">Wrong format, letters only</p>
+        <label for="card-num">Card Number</label>
+        <input type="text" inputmode="numeric" id="card-num" name="card-num" placeholder="e.g. 1234 5678 9123 0000"
+          maxlength="16">
+        <p class="error" id="errorNum">Wrong format, numbers only</p>
+        <div>
+          <div id="exp-cvc-container">
+
+            <div id="exp-date-container">
+              <label for="exp-date">Exp. Date (MM/YY)</label>
+              <div id="input-exp-date">
+                <div>
+                  <input type="text" inputmode="numeric" id="month" class="exp-date" name="exp-date" placeholder="MM"
+                    size="3" maxlength="2">
+                  <p class="error" id="errorMonth"></p>
+                </div>
+                <div>
+                  <input type="text" inputmode="numeric" id="year" class="exp-date" name="exp-date" placeholder="YY"
+                    size="3" maxlength="2">
+                  <p class="error" id="errorDate"></p>
+                </div>
+              </div>
+            </div>
+            <div id="cvc-container">
+              <label for="cvc">CVC</label>
+              <input type="text" inputmode="numeric" id="cvcInput" placeholder="e.g. 123" maxlength="3">
+              <p class="error" id="errorCvc">Can`t be blank</p>
+            </div>
+          </div>
+        </div>
+        <button id="confirmBtn">Confirm</button>
+      </form>
+      <div id="thank-you">
+        <img src="images/icon-complete.svg" alt="complete">
+        <p>Thank you!</p>
+        <p>We've added your card details</p>
+        <button id="continueBtn">Continue</button>
+      </div>
+    </div>
+  </main>
+  <script src="./script.js" />
+</body>
+
+</html>
